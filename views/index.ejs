@@ -1,0 +1,178 @@
+<%- include('partials/head', { title: lang === 'vi' ? 'GIANG FASHION — Nghệ Thuật Của Sự Sang Trọng' : 'GIANG FASHION — The Art of Luxury' }) %>
+<%- include('partials/nav') %>
+
+<!-- ══ Hero ══ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg">
+    <img
+      src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1920&q=90"
+      alt="GIANG FASHION — Fall Winter 2025 Collection"
+      loading="eager"
+    />
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-season">FW 2025 — <%= lang === 'vi' ? 'Bộ Sưu Tập Mới Nhất' : 'Latest Collection' %></p>
+    <h1 class="hero-title">
+      <%= lang === 'vi' ? 'Nghệ Thuật<br>Của <em>Sự Sang<br>Trọng</em>' : 'The Art<br>Of <em>Luxury<br>Redefined</em>' %>
+    </h1>
+    <p class="hero-subtitle">
+      <%= lang === 'vi'
+        ? 'GIANG FASHION — nơi di sản phương Đông hòa quyện cùng tinh hoa haute couture, tạo nên những kiệt tác thời trang vượt thời gian.'
+        : 'GIANG FASHION — where Eastern heritage fuses with the finest haute couture craft, creating timeless fashion masterpieces.' %>
+    </p>
+    <div class="hero-cta">
+      <a href="/collections?lang=<%= lang %>" class="btn-primary">
+        <span><%= lang === 'vi' ? 'Khám Phá Bộ Sưu Tập' : 'Explore Collection' %></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/lookbook?lang=<%= lang %>" class="btn-outline">Lookbook</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">Scroll</div>
+</section>
+
+<!-- ══ Brand Strip ══ -->
+<div class="brand-strip reveal">
+  <div class="strip-item">
+    <span class="strip-number" data-count="15" data-suffix="+">15+</span>
+    <span class="strip-label"><%= lang === 'vi' ? 'Năm Kinh Nghiệm' : 'Years of Craft' %></span>
+  </div>
+  <div class="strip-item">
+    <span class="strip-number" data-count="200" data-suffix="+">200+</span>
+    <span class="strip-label"><%= lang === 'vi' ? 'Thiết Kế Độc Quyền' : 'Exclusive Designs' %></span>
+  </div>
+  <div class="strip-item">
+    <span class="strip-number" data-count="12">12</span>
+    <span class="strip-label"><%= lang === 'vi' ? 'Bộ Sưu Tập' : 'Collections' %></span>
+  </div>
+  <div class="strip-item">
+    <span class="strip-number" data-count="5000" data-suffix="+">5000+</span>
+    <span class="strip-label"><%= lang === 'vi' ? 'Khách Hàng Toàn Cầu' : 'Global Clients' %></span>
+  </div>
+</div>
+
+<!-- ══ Featured Collections ══ -->
+<section class="section">
+  <div class="reveal">
+    <p class="section-label"><%= lang === 'vi' ? 'Bộ Sưu Tập' : 'Collections' %></p>
+    <h2 class="section-title"><%= lang === 'vi' ? 'Những <em>Kiệt Tác</em><br>Mới Nhất' : 'Our Latest<br><em>Masterpieces</em>' %></h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="collections-grid reveal reveal-delay-2">
+    <% collections.slice(0, 5).forEach((col, i) => { %>
+    <a href="/collections/<%= col.id %>?lang=<%= lang %>" class="collection-card">
+      <img
+        src="<%= col.image %>"
+        alt="<%= col.name %>"
+        loading="<%= i === 0 ? 'eager' : 'lazy' %>"
+      />
+      <div class="collection-overlay">
+        <p class="collection-season"><%= col.season %></p>
+        <h3 class="collection-name"><%= col.name %></h3>
+        <p class="collection-desc"><%= lang === 'vi' ? col.desc.vi : col.desc.en %></p>
+        <span class="collection-link">
+          <%= lang === 'vi' ? 'Xem Bộ Sưu Tập' : 'View Collection' %>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </a>
+    <% }) %>
+  </div>
+
+  <div style="text-align:center;margin-top:60px;" class="reveal reveal-delay-3">
+    <a href="/collections?lang=<%= lang %>" class="btn-outline">
+      <%= lang === 'vi' ? 'Xem Tất Cả Bộ Sưu Tập' : 'View All Collections' %>
+    </a>
+  </div>
+</section>
+
+<!-- ══ Brand Story ══ -->
+<section class="story-section" aria-label="<%= lang === 'vi' ? 'Câu chuyện thương hiệu' : 'Brand story' %>">
+  <div class="story-image">
+    <img
+      src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1200&q=85"
+      alt="<%= lang === 'vi' ? 'Nhà may GIANG FASHION' : 'GIANG FASHION atelier' %>"
+      loading="lazy"
+    />
+    <div class="story-image-overlay"></div>
+  </div>
+  <div class="story-content">
+    <p class="section-label reveal"><%= lang === 'vi' ? 'Câu Chuyện Của Chúng Tôi' : 'Our Story' %></p>
+    <h2 class="section-title reveal reveal-delay-1">
+      <%= lang === 'vi' ? 'Di Sản &<br><em>Sự Sáng Tạo</em>' : 'Heritage &<br><em>Innovation</em>' %>
+    </h2>
+    <blockquote class="story-quote reveal reveal-delay-2">
+      "<%= lang === 'vi'
+        ? 'Mỗi đường kim mũi chỉ là một câu thơ, mỗi trang phục là một bài thơ về vẻ đẹp người phụ nữ Việt Nam.'
+        : 'Every stitch is a verse, every garment a poem celebrating the beauty of the Vietnamese woman.' %>"
+    </blockquote>
+    <p class="story-body reveal reveal-delay-3">
+      <%= lang === 'vi'
+        ? 'Được thành lập từ năm 2010, GIANG FASHION đã trở thành biểu tượng của thời trang xa xỉ Việt Nam. Chúng tôi tin rằng thời trang không chỉ là quần áo — đó là ngôn ngữ của bản sắc, là sự thể hiện của linh hồn.'
+        : 'Founded in 2010, GIANG FASHION has become an icon of Vietnamese luxury fashion. We believe fashion is not merely clothing — it is the language of identity, the expression of the soul.' %>
+      <br><br>
+      <%= lang === 'vi'
+        ? 'Mỗi bộ sưu tập được dệt nên từ hàng trăm giờ nghề thủ công tỉ mỉ, kết hợp giữa kỹ thuật dệt truyền thống Việt Nam và ngôn ngữ thiết kế quốc tế đương đại.'
+        : 'Each collection is woven from hundreds of hours of meticulous craftsmanship, blending traditional Vietnamese weaving techniques with contemporary international design language.' %>
+    </p>
+    <a href="/about?lang=<%= lang %>" class="btn-outline reveal reveal-delay-4">
+      <%= lang === 'vi' ? 'Khám Phá Câu Chuyện' : 'Discover Our Story' %>
+    </a>
+  </div>
+</section>
+
+<!-- ══ Lookbook Preview ══ -->
+<section class="section">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap;" class="reveal">
+    <div>
+      <p class="section-label">Lookbook</p>
+      <h2 class="section-title"><%= lang === 'vi' ? '<em>Nhìn Thấy</em><br>Vẻ Đẹp' : 'See The<br><em>Beauty</em>' %></h2>
+    </div>
+    <a href="/lookbook?lang=<%= lang %>" class="btn-outline" style="flex-shrink:0;">
+      <%= lang === 'vi' ? 'Xem Lookbook' : 'View Lookbook' %>
+    </a>
+  </div>
+
+  <div class="lookbook-scroll reveal reveal-delay-2">
+    <% lookbook.forEach(item => { %>
+    <div class="lookbook-item">
+      <img
+        src="<%= item.image %>"
+        alt="<%= lang === 'vi' ? item.caption.vi : item.caption.en %>"
+        loading="lazy"
+      />
+      <div class="lookbook-item-overlay">
+        <p class="lookbook-caption"><%= lang === 'vi' ? item.caption.vi : item.caption.en %></p>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<!-- ══ CTA Banner ══ -->
+<section style="
+  padding: clamp(80px,12vw,140px) clamp(20px,5vw,80px);
+  text-align: center;
+  background: linear-gradient(135deg, #0D0D0D 0%, #1a1208 50%, #0D0D0D 100%);
+  border-top: 1px solid rgba(201,168,76,0.15);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+" class="reveal">
+  <p class="section-label" style="text-align:center;display:block;"><%= lang === 'vi' ? 'Trải Nghiệm Xa Xỉ' : 'Luxury Experience' %></p>
+  <h2 class="section-title" style="text-align:center;max-width:700px;margin:0 auto 24px;">
+    <%= lang === 'vi' ? 'Sẵn Sàng Trải Nghiệm<br><em>GIANG FASHION</em>?' : 'Ready to Experience<br><em>GIANG FASHION</em>?' %>
+  </h2>
+  <p style="color:var(--gray-1);font-size:16px;max-width:500px;margin:0 auto 48px;line-height:1.85;">
+    <%= lang === 'vi'
+      ? 'Liên hệ với chúng tôi để đặt lịch tư vấn riêng tư tại showroom Sài Gòn hoặc trực tuyến toàn cầu.'
+      : 'Contact us to schedule a private consultation at our Saigon showroom or online worldwide.' %>
+  </p>
+  <a href="/contact?lang=<%= lang %>" class="btn-primary">
+    <span><%= lang === 'vi' ? 'Liên Hệ Ngay' : 'Get In Touch' %></span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,112 @@
+<%- include('partials/head', { title: (lang === 'vi' ? 'Liên Hệ' : 'Contact') + ' — GIANG FASHION' }) %>
+<%- include('partials/nav') %>
+
+<div style="height:80px;"></div>
+
+<!-- ══ Page Hero ══ -->
+<div class="page-hero">
+  <div class="page-hero-bg">
+    <img src="https://images.unsplash.com/photo-1617922001439-4a2e6562f328?w=1920&q=85" alt="Contact" loading="eager" />
+  </div>
+  <div class="page-hero-content">
+    <p class="page-hero-label"><%= lang === 'vi' ? 'Kết Nối Với Chúng Tôi' : 'Connect With Us' %></p>
+    <h1 class="page-hero-title"><%= lang === 'vi' ? 'Liên Hệ' : 'Contact' %></h1>
+  </div>
+</div>
+
+<!-- ══ Contact ══ -->
+<div class="contact-grid">
+  <div class="contact-info reveal">
+    <p class="section-label"><%= lang === 'vi' ? 'Thông Tin' : 'Information' %></p>
+    <h2 class="section-title" style="margin-bottom:48px;"><%= lang === 'vi' ? 'Chúng Tôi <em>Lắng Nghe</em>' : 'We <em>Listen</em>' %></h2>
+
+    <div class="contact-item">
+      <p class="contact-item-label"><%= lang === 'vi' ? 'Địa Chỉ' : 'Address' %></p>
+      <p class="contact-item-value"><%= lang === 'vi' ? brand.address.vi : brand.address.en %></p>
+    </div>
+
+    <div class="contact-item">
+      <p class="contact-item-label">Email</p>
+      <p class="contact-item-value"><a href="mailto:<%= brand.email %>" style="color:var(--gold);transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"><%= brand.email %></a></p>
+    </div>
+
+    <div class="contact-item">
+      <p class="contact-item-label"><%= lang === 'vi' ? 'Điện Thoại' : 'Phone' %></p>
+      <p class="contact-item-value"><a href="tel:<%= brand.phone.replace(/\s/g,'') %>" style="color:var(--cream);"><%= brand.phone %></a></p>
+    </div>
+
+    <div class="contact-item">
+      <p class="contact-item-label"><%= lang === 'vi' ? 'Giờ Làm Việc' : 'Opening Hours' %></p>
+      <p class="contact-item-value">
+        <%= lang === 'vi' ? 'Thứ Hai — Thứ Bảy' : 'Monday — Saturday' %><br>
+        9:00 AM — 7:00 PM
+      </p>
+    </div>
+
+    <div class="contact-item">
+      <p class="contact-item-label"><%= lang === 'vi' ? 'Đặt Lịch Riêng' : 'Private Appointment' %></p>
+      <p class="contact-item-value" style="font-size:14px;color:var(--gray-1);line-height:1.8;">
+        <%= lang === 'vi'
+          ? 'Chúng tôi cung cấp dịch vụ tư vấn riêng tư cho khách hàng muốn trải nghiệm bộ sưu tập trong không gian đặc biệt.'
+          : 'We offer private consultations for clients who wish to experience the collection in an exclusive setting.' %>
+      </p>
+    </div>
+  </div>
+
+  <div class="contact-form-wrap reveal reveal-delay-2">
+    <p class="section-label"><%= lang === 'vi' ? 'Gửi Tin Nhắn' : 'Send Message' %></p>
+    <h2 class="section-title" style="margin-bottom:48px;"><%= lang === 'vi' ? 'Để Lại <em>Lời Nhắn</em>' : 'Leave a <em>Message</em>' %></h2>
+
+    <% if (success) { %>
+    <div class="success-msg">
+      ✓ <%= lang === 'vi' ? 'Tin nhắn của bạn đã được gửi thành công. Chúng tôi sẽ phản hồi trong vòng 24 giờ.' : 'Your message has been sent successfully. We will respond within 24 hours.' %>
+    </div>
+    <% } %>
+
+    <form action="/contact?lang=<%= lang %>" method="POST" novalidate>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 32px;">
+        <div class="form-group">
+          <label for="name" class="form-label"><%= lang === 'vi' ? 'Họ Và Tên' : 'Full Name' %> *</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="<%= lang === 'vi' ? 'Nguyễn Thị Lan' : 'Jane Smith' %>" required />
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email *</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="hello@example.com" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="form-label"><%= lang === 'vi' ? 'Số Điện Thoại' : 'Phone Number' %></label>
+        <input type="tel" id="phone" name="phone" class="form-input" placeholder="+84 9xx xxx xxx" autocomplete="tel" />
+      </div>
+
+      <div class="form-group">
+        <label for="subject" class="form-label"><%= lang === 'vi' ? 'Chủ Đề' : 'Subject' %> *</label>
+        <input type="text" id="subject" name="subject" class="form-input" placeholder="<%= lang === 'vi' ? 'Tư vấn bộ sưu tập / Đặt thiết kế riêng' : 'Collection consultation / Custom design' %>" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message" class="form-label"><%= lang === 'vi' ? 'Tin Nhắn' : 'Message' %> *</label>
+        <textarea id="message" name="message" class="form-textarea" placeholder="<%= lang === 'vi' ? 'Hãy cho chúng tôi biết bạn cần gì...' : 'Tell us what you need...' %>" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary">
+        <span><%= lang === 'vi' ? 'Gửi Tin Nhắn' : 'Send Message' %></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ══ Map Placeholder ══ -->
+<div style="height:400px;background:var(--dark-2);display:flex;align-items:center;justify-content:center;border-top:1px solid var(--border-dim);">
+  <div style="text-align:center;">
+    <div style="width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    </div>
+    <p style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;"><%= lang === 'vi' ? 'Showroom' : 'Showroom' %></p>
+    <p style="font-size:14px;color:var(--gray-1);"><%= lang === 'vi' ? brand.address.vi : brand.address.en %></p>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

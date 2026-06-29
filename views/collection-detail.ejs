@@ -1,0 +1,86 @@
+<%- include('partials/head', { title: collection.name + ' — GIANG FASHION' }) %>
+<%- include('partials/nav') %>
+
+<!-- ══ Hero ══ -->
+<div class="collection-detail-hero">
+  <img src="<%= collection.image.replace('w=800','w=1920') %>" alt="<%= collection.name %>" loading="eager" />
+  <div class="collection-detail-content">
+    <p class="page-hero-label"><%= collection.season %></p>
+    <h1 class="page-hero-title" style="font-size:clamp(48px,8vw,100px);"><%= collection.name %></h1>
+    <p style="font-size:18px;color:var(--cream-dim);margin-top:16px;max-width:500px;">
+      <%= lang === 'vi' ? collection.desc.vi : collection.desc.en %>
+    </p>
+  </div>
+</div>
+
+<!-- ══ Info Bar ══ -->
+<div class="brand-strip reveal" style="max-width:none;">
+  <div class="strip-item">
+    <span class="strip-number"><%= collection.pieces %></span>
+    <span class="strip-label"><%= lang === 'vi' ? 'Thiết Kế' : 'Pieces' %></span>
+  </div>
+  <div class="strip-item">
+    <span class="strip-number" style="font-size:20px;"><%= collection.season %></span>
+    <span class="strip-label"><%= lang === 'vi' ? 'Mùa' : 'Season' %></span>
+  </div>
+  <div class="strip-item">
+    <span class="strip-number" style="font-size:20px;"><%= lang === 'vi' ? 'Thủ Công' : 'Handcrafted' %></span>
+    <span class="strip-label"><%= lang === 'vi' ? 'Phương Pháp' : 'Method' %></span>
+  </div>
+</div>
+
+<!-- ══ Gallery ══ -->
+<section class="section">
+  <div class="reveal" style="margin-bottom:48px;">
+    <p class="section-label"><%= lang === 'vi' ? 'Bộ Sưu Tập' : 'The Collection' %></p>
+    <h2 class="section-title"><%= lang === 'vi' ? 'Chi Tiết <em>Nghệ Thuật</em>' : '<em>Artistic</em> Details' %></h2>
+  </div>
+
+  <div class="collection-detail-gallery">
+    <%
+      const galleryImages = [
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=85',
+        'https://images.unsplash.com/photo-1566206091558-7f218b696731?w=800&q=85',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800&q=85',
+        'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800&q=85',
+        'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=85',
+        'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=85',
+        'https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=800&q=85',
+        'https://images.unsplash.com/photo-1617922001439-4a2e6562f328?w=800&q=85',
+      ];
+    %>
+    <% galleryImages.forEach((img, i) => { %>
+    <div class="gallery-item reveal" style="transition-delay:<%= (i % 4) * 0.1 %>s">
+      <img src="<%= img %>" alt="<%= collection.name %> - piece <%= i+1 %>" loading="lazy" />
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<!-- ══ Description ══ -->
+<section style="padding:clamp(60px,8vw,100px) clamp(20px,5vw,80px);background:var(--dark-2);">
+  <div style="max-width:700px;margin:0 auto;text-align:center;" class="reveal">
+    <p class="section-label" style="text-align:center;display:block;"><%= lang === 'vi' ? 'Về Bộ Sưu Tập' : 'About the Collection' %></p>
+    <h2 class="section-title" style="text-align:center;"><%= collection.name %></h2>
+    <div class="divider" style="margin:24px auto;"></div>
+    <p style="font-size:16px;color:var(--gray-1);line-height:1.9;margin-bottom:32px;">
+      <%= lang === 'vi'
+        ? `Bộ sưu tập ${collection.name} là sự kết hợp hoàn hảo giữa di sản văn hóa và ngôn ngữ thời trang hiện đại. Mỗi thiết kế được tạo ra từ những vật liệu cao cấp nhất, qua đôi tay tài hoa của những nghệ nhân Việt Nam.`
+        : `The ${collection.name} collection represents a perfect marriage of cultural heritage and modern fashion language. Each piece is crafted from the finest materials by the skilled hands of Vietnamese artisans.` %>
+    </p>
+    <a href="/contact?lang=<%= lang %>" class="btn-primary">
+      <span><%= lang === 'vi' ? 'Đặt Lịch Tư Vấn' : 'Schedule Consultation' %></span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ══ Back ══ -->
+<div style="padding:40px clamp(20px,5vw,80px);">
+  <a href="/collections?lang=<%= lang %>" style="display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray-1);font-weight:500;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--gray-1)'">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <%= lang === 'vi' ? 'Tất Cả Bộ Sưu Tập' : 'All Collections' %>
+  </a>
+</div>
+
+<%- include('partials/footer') %>

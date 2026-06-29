@@ -1,0 +1,50 @@
+<%- include('partials/head', { title: lang === 'vi' ? 'Bộ Sưu Tập — GIANG FASHION' : 'Collections — GIANG FASHION' }) %>
+<%- include('partials/nav') %>
+
+<div style="height:80px;"></div>
+
+<!-- ══ Page Hero ══ -->
+<div class="page-hero">
+  <div class="page-hero-bg">
+    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1920&q=85" alt="Collections" loading="eager" />
+  </div>
+  <div class="page-hero-content">
+    <p class="page-hero-label"><%= lang === 'vi' ? 'Bộ Sưu Tập' : 'Collections' %></p>
+    <h1 class="page-hero-title"><%= lang === 'vi' ? 'Những Kiệt Tác' : 'Masterpieces' %></h1>
+  </div>
+</div>
+
+<!-- ══ Intro ══ -->
+<section class="section" style="padding-bottom:0;">
+  <div class="reveal" style="max-width:640px;">
+    <p class="section-label"><%= lang === 'vi' ? 'Thế Giới GIANG FASHION' : 'The GIANG FASHION World' %></p>
+    <p class="section-desc" style="font-size:18px;color:var(--cream-dim);line-height:1.85;">
+      <%= lang === 'vi'
+        ? 'Mỗi bộ sưu tập là một hành trình cảm xúc — từ cảm hứng đến từ thiên nhiên, lịch sử đến văn hóa phương Đông, được chuyển hóa thành những tuyệt tác thời trang.'
+        : 'Each collection is an emotional journey — from inspiration drawn from nature, history to Eastern culture, transformed into fashion masterpieces.' %>
+    </p>
+  </div>
+</section>
+
+<!-- ══ Collections Grid ══ -->
+<section class="section" style="padding-top:60px;">
+  <div class="collections-full">
+    <% collections.forEach((col, i) => { %>
+    <a href="/collections/<%= col.id %>?lang=<%= lang %>" class="collection-full-card reveal" style="transition-delay:<%= (i % 3) * 0.1 %>s">
+      <img
+        src="<%= col.image %>"
+        alt="<%= col.name %>"
+        loading="<%= i < 3 ? 'eager' : 'lazy' %>"
+      />
+      <div class="collection-full-info">
+        <p class="cf-season"><%= col.season %></p>
+        <h2 class="cf-name"><%= col.name %></h2>
+        <p class="cf-desc"><%= lang === 'vi' ? col.desc.vi : col.desc.en %></p>
+        <p class="cf-pieces"><%= col.pieces %> <%= lang === 'vi' ? 'Thiết kế' : 'Pieces' %></p>
+      </div>
+    </a>
+    <% }) %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

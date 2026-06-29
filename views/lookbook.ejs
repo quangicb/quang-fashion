@@ -1,0 +1,60 @@
+<%- include('partials/head', { title: 'Lookbook — GIANG FASHION' }) %>
+<%- include('partials/nav') %>
+
+<div style="height:80px;"></div>
+
+<!-- ══ Page Hero ══ -->
+<div class="page-hero" style="height:clamp(350px,55vh,600px);">
+  <div class="page-hero-bg">
+    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1920&q=90" alt="Lookbook" loading="eager" />
+  </div>
+  <div class="page-hero-content">
+    <p class="page-hero-label">FW 2025</p>
+    <h1 class="page-hero-title">Lookbook</h1>
+  </div>
+</div>
+
+<!-- ══ Intro ══ -->
+<section class="section" style="padding-bottom:60px;">
+  <div class="reveal" style="max-width:580px;">
+    <p class="section-label">Editorial</p>
+    <p class="section-desc" style="font-size:18px;color:var(--cream-dim);line-height:1.85;">
+      <%= lang === 'vi'
+        ? 'Một hành trình thị giác qua những khoảnh khắc đẹp nhất của GIANG FASHION. Nhấp vào bất kỳ hình ảnh nào để xem kích thước đầy đủ.'
+        : 'A visual journey through the most beautiful moments of GIANG FASHION. Click any image to view full size.' %>
+    </p>
+  </div>
+</section>
+
+<!-- ══ Masonry Grid ══ -->
+<section style="padding:0 clamp(20px,5vw,80px) clamp(80px,10vw,120px);">
+  <div class="lookbook-masonry">
+    <%
+      const allImages = [
+        { image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&q=90', caption: { vi: 'Thu Đông 2025 — Tầm Nhìn Mới', en: 'Fall Winter 2025 — A New Vision' } },
+        { image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&q=90', caption: { vi: 'Đường Phố Sài Gòn', en: 'Streets of Saigon' } },
+        { image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1200&q=90', caption: { vi: 'Ánh Sáng Vàng', en: 'Golden Light' } },
+        { image: 'https://images.unsplash.com/photo-1566206091558-7f218b696731?w=1200&q=90', caption: { vi: 'Sức Mạnh Nữ Tính', en: 'Feminine Power' } },
+        { image: 'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=1200&q=90', caption: { vi: 'Nghệ Thuật Đương Đại', en: 'Contemporary Art' } },
+        { image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=90', caption: { vi: 'Cuộc Sống Xa Hoa', en: 'Luxurious Life' } },
+        { image: 'https://images.unsplash.com/photo-1617922001439-4a2e6562f328?w=1200&q=90', caption: { vi: 'Đêm Sài Gòn', en: 'Saigon Night' } },
+        { image: 'https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=1200&q=90', caption: { vi: 'Thời Trang Là Nghệ Thuật', en: 'Fashion Is Art' } },
+        { image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&q=90', caption: { vi: 'Thanh Lịch Vĩnh Cửu', en: 'Timeless Elegance' } },
+        { image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1200&q=90', caption: { vi: 'Bí Ẩn Trong Bóng Tối', en: 'Mystery in Darkness' } },
+        { image: 'https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?w=1200&q=90', caption: { vi: 'Nhung Đêm', en: 'Night Velvet' } },
+        { image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=1200&q=90', caption: { vi: 'Trắng Tinh Khôi', en: 'Pure White' } },
+      ];
+    %>
+    <% allImages.forEach((item, i) => { %>
+    <div class="lookbook-full reveal" style="transition-delay:<%= (i % 3) * 0.1 %>s">
+      <img
+        src="<%= item.image %>"
+        alt="<%= lang === 'vi' ? item.caption.vi : item.caption.en %>"
+        loading="<%= i < 3 ? 'eager' : 'lazy' %>"
+      />
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

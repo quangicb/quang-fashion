@@ -1,0 +1,151 @@
+<%- include('partials/head', { title: (lang === 'vi' ? 'Về Chúng Tôi' : 'About') + ' — GIANG FASHION' }) %>
+<%- include('partials/nav') %>
+
+<!-- ══ Hero ══ -->
+<section class="about-hero">
+  <div class="about-hero-bg">
+    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1920&q=90" alt="GIANG FASHION Atelier" loading="eager" />
+  </div>
+  <div class="about-hero-content">
+    <p class="section-label" style="text-align:center;display:block;margin-bottom:16px;"><%= lang === 'vi' ? 'Về Chúng Tôi' : 'About Us' %></p>
+    <h1 class="hero-title" style="text-align:center;font-size:clamp(48px,8vw,100px);">
+      <%= lang === 'vi' ? 'Di Sản &<br><em>Sự Kiêu Hãnh</em>' : 'Heritage &<br><em>Pride</em>' %>
+    </h1>
+  </div>
+</section>
+
+<!-- ══ Mission ══ -->
+<section class="section">
+  <div style="max-width:800px;margin:0 auto;text-align:center;" class="reveal">
+    <p class="section-label" style="display:block;text-align:center;"><%= lang === 'vi' ? 'Sứ Mệnh' : 'Mission' %></p>
+    <h2 class="section-title" style="text-align:center;"><%= lang === 'vi' ? 'Chúng Tôi Tin Vào<br><em>Vẻ Đẹp Đích Thực</em>' : 'We Believe In<br><em>Authentic Beauty</em>' %></h2>
+    <div class="divider" style="margin:32px auto;"></div>
+    <p style="font-size:clamp(16px,1.5vw,20px);color:var(--cream-dim);line-height:1.9;font-family:var(--ff-garamond);font-style:italic;">
+      "<%= lang === 'vi'
+        ? 'GIANG FASHION không đơn thuần là một thương hiệu thời trang. Chúng tôi là người kể chuyện — những câu chuyện về vẻ đẹp, về bản sắc, về sức mạnh tiềm ẩn trong mỗi người phụ nữ Việt Nam.'
+        : 'GIANG FASHION is not merely a fashion brand. We are storytellers — stories of beauty, identity, and the hidden strength within every Vietnamese woman.' %>"
+    </p>
+  </div>
+</section>
+
+<!-- ══ Timeline ══ -->
+<section style="background:var(--dark-2);padding:clamp(80px,10vw,140px) 0;">
+  <div style="padding:0 clamp(20px,5vw,80px);margin-bottom:60px;" class="reveal">
+    <p class="section-label"><%= lang === 'vi' ? 'Lịch Sử' : 'History' %></p>
+    <h2 class="section-title"><%= lang === 'vi' ? 'Hành Trình <em>15 Năm</em>' : 'A Journey of <em>15 Years</em>' %></h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-year">2010</div>
+      <div>
+        <h3 class="timeline-title"><%= lang === 'vi' ? 'Khởi Nguyên' : 'The Beginning' %></h3>
+        <p class="timeline-text">
+          <%= lang === 'vi'
+            ? 'GIANG FASHION được thành lập tại TP. Hồ Chí Minh với một atelier nhỏ và một niềm đam mê lớn. Những bộ váy đầu tiên được tạo ra bởi chính tay nhà sáng lập, mang theo ước mơ về một thương hiệu thời trang Việt Nam đẳng cấp quốc tế.'
+            : 'GIANG FASHION was founded in Ho Chi Minh City with a small atelier and a grand passion. The first gowns were crafted by the founder\'s own hands, carrying a dream of an internationally acclaimed Vietnamese fashion house.' %>
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item reveal reveal-delay-1">
+      <div class="timeline-year">2013</div>
+      <div>
+        <h3 class="timeline-title"><%= lang === 'vi' ? 'Ra Mắt Quốc Tế' : 'International Debut' %></h3>
+        <p class="timeline-text">
+          <%= lang === 'vi'
+            ? 'Lần đầu tiên trình diễn tại Tuần Lễ Thời Trang Singapore, GIANG FASHION gây tiếng vang lớn với bộ sưu tập "Mekong Dreams" — sự hòa quyện giữa lụa Hà Đông và kỹ thuật thêu thủ công.'
+            : 'Debuting at Singapore Fashion Week, GIANG FASHION made a resounding impression with the "Mekong Dreams" collection — a fusion of Ha Dong silk and hand-embroidery techniques.' %>
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item reveal reveal-delay-2">
+      <div class="timeline-year">2017</div>
+      <div>
+        <h3 class="timeline-title"><%= lang === 'vi' ? 'Mở Rộng Showroom' : 'Showroom Expansion' %></h3>
+        <p class="timeline-text">
+          <%= lang === 'vi'
+            ? 'Khai trương flagship store tại con phố sang trọng nhất Sài Gòn — Đồng Khởi. Không gian 500m² được thiết kế bởi kiến trúc sư nổi tiếng người Pháp, trở thành điểm đến của giới thượng lưu.'
+            : 'Opened the flagship store on Saigon\'s most prestigious street — Dong Khoi. The 500m² space, designed by a renowned French architect, became a destination for the elite.' %>
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item reveal reveal-delay-3">
+      <div class="timeline-year">2021</div>
+      <div>
+        <h3 class="timeline-title"><%= lang === 'vi' ? 'Haute Couture' : 'Haute Couture Recognition' %></h3>
+        <p class="timeline-text">
+          <%= lang === 'vi'
+            ? 'Được công nhận là thương hiệu haute couture đầu tiên của Việt Nam bởi Hiệp hội Thời Trang Quốc Tế. Một cột mốc lịch sử cho ngành thời trang cao cấp Việt Nam.'
+            : 'Recognized as Vietnam\'s first haute couture brand by the International Fashion Association. A historic milestone for Vietnamese luxury fashion.' %>
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item reveal reveal-delay-4">
+      <div class="timeline-year">2025</div>
+      <div>
+        <h3 class="timeline-title"><%= lang === 'vi' ? 'Tầm Nhìn Mới' : 'New Vision' %></h3>
+        <p class="timeline-text">
+          <%= lang === 'vi'
+            ? 'Ra mắt digital flagship và mở rộng ra thị trường Đông Nam Á, châu Âu. GIANG FASHION tiếp tục hành trình đưa vẻ đẹp Việt Nam ra thế giới.'
+            : 'Launching the digital flagship and expanding to Southeast Asian and European markets. GIANG FASHION continues the journey of bringing Vietnamese beauty to the world.' %>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Values ══ -->
+<section class="section">
+  <div class="reveal" style="margin-bottom:64px;">
+    <p class="section-label"><%= lang === 'vi' ? 'Giá Trị' : 'Values' %></p>
+    <h2 class="section-title"><%= lang === 'vi' ? 'Những Điều <em>Chúng Tôi</em><br>Tin Tưởng' : 'What We<br><em>Believe In</em>' %></h2>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:40px;">
+    <%
+      const values = [
+        { icon: '✦', title: { vi: 'Thủ Công Nghệ Thuật', en: 'Artisan Craft' }, desc: { vi: 'Mỗi sản phẩm đều được tạo ra bằng đôi tay và trái tim. Chúng tôi tôn vinh truyền thống thủ công Việt Nam trong từng mũi kim.', en: 'Every product is made with hands and heart. We honor Vietnamese artisan traditions in every stitch.' } },
+        { icon: '◈', title: { vi: 'Nguyên Liệu Cao Cấp', en: 'Premium Materials' }, desc: { vi: 'Chỉ sử dụng những vật liệu tốt nhất — lụa Việt Nam, cashmere Ý, ren Pháp — để tạo nên những kiệt tác bền vững.', en: 'Only the finest materials — Vietnamese silk, Italian cashmere, French lace — are used to create lasting masterpieces.' } },
+        { icon: '◉', title: { vi: 'Bản Sắc Việt', en: 'Vietnamese Identity' }, desc: { vi: 'Chúng tôi tự hào về di sản văn hóa phong phú của Việt Nam và không ngừng tìm cách đưa vẻ đẹp đó vào từng thiết kế.', en: 'We take pride in Vietnam\'s rich cultural heritage and continuously find ways to infuse that beauty into every design.' } },
+        { icon: '⬡', title: { vi: 'Phát Triển Bền Vững', en: 'Sustainability' }, desc: { vi: 'Cam kết với thời trang chậm và bền vững. Chúng tôi sản xuất có giới hạn, chất lượng không giới hạn.', en: 'Committed to slow and sustainable fashion. We produce in limited quantities, with unlimited quality.' } },
+      ];
+    %>
+    <% values.forEach((v, i) => { %>
+    <div class="reveal" style="transition-delay:<%= i * 0.1 %>s">
+      <div style="font-size:24px;color:var(--gold);margin-bottom:20px;font-family:var(--ff-serif);"><%= v.icon %></div>
+      <h3 style="font-family:var(--ff-serif);font-size:22px;color:var(--white);margin-bottom:12px;font-weight:400;"><%= lang === 'vi' ? v.title.vi : v.title.en %></h3>
+      <p style="font-size:14px;color:var(--gray-1);line-height:1.85;"><%= lang === 'vi' ? v.desc.vi : v.desc.en %></p>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<!-- ══ Team ══ -->
+<section class="section" style="padding-top:0;">
+  <div class="reveal" style="margin-bottom:48px;">
+    <p class="section-label"><%= lang === 'vi' ? 'Đội Ngũ' : 'The Team' %></p>
+    <h2 class="section-title"><%= lang === 'vi' ? 'Những <em>Con Người</em><br>Đằng Sau Vẻ Đẹp' : 'The <em>People</em><br>Behind the Beauty' %></h2>
+  </div>
+
+  <div class="team-grid">
+    <%
+      const team = [
+        { name: 'Giang Nguyễn', role: { vi: 'Nhà Sáng Lập & Giám Đốc Sáng Tạo', en: 'Founder & Creative Director' }, image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=85' },
+        { name: 'Minh Châu', role: { vi: 'Trưởng Nhóm Thiết Kế', en: 'Head of Design' }, image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=85' },
+        { name: 'Linh Phạm', role: { vi: 'Giám Đốc Nghệ Thuật', en: 'Art Director' }, image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=85' },
+        { name: 'Hà Trần', role: { vi: 'Nghệ Nhân Cao Cấp', en: 'Master Artisan' }, image: 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=600&q=85' },
+      ];
+    %>
+    <% team.forEach((member, i) => { %>
+    <div class="team-card reveal" style="transition-delay:<%= i * 0.1 %>s">
+      <img src="<%= member.image %>" alt="<%= member.name %>" loading="lazy" />
+      <div class="team-info">
+        <p class="team-name"><%= member.name %></p>
+        <p class="team-role"><%= lang === 'vi' ? member.role.vi : member.role.en %></p>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

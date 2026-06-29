@@ -1,0 +1,64 @@
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">GIANG <span>FASHION</span></div>
+      <p class="footer-tagline">
+        <%= lang === 'vi'
+          ? 'Nơi di sản phương Đông gặp gỡ nghệ thuật haute couture hiện đại. Mỗi thiết kế là một câu chuyện về vẻ đẹp, quyền lực và sự tinh tế.'
+          : 'Where Eastern heritage meets modern haute couture. Each design tells a story of beauty, power, and refinement.' %>
+      </p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Pinterest">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.4 9.29-.09-.78-.17-2 .03-2.85.19-.77 1.27-5.4 1.27-5.4s-.32-.65-.32-1.61c0-1.51.88-2.64 1.97-2.64.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.54 1.97 1.61 1.97 1.93 0 3.42-2.04 3.42-4.98 0-2.6-1.87-4.42-4.54-4.42-3.09 0-4.9 2.32-4.9 4.72 0 .93.36 1.93.81 2.48.09.11.1.2.07.31-.08.34-.27 1.09-.31 1.24-.05.2-.16.24-.37.14-1.39-.65-2.26-2.68-2.26-4.32 0-3.51 2.55-6.74 7.36-6.74 3.87 0 6.88 2.75 6.88 6.43 0 3.84-2.42 6.92-5.77 6.92-1.13 0-2.19-.59-2.55-1.28l-.69 2.6c-.25.96-.93 2.17-1.38 2.9.04.01.08.02.12.02z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke="none" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title"><%= lang === 'vi' ? 'Khám Phá' : 'Explore' %></div>
+      <ul class="footer-links">
+        <li><a href="/collections?lang=<%= lang %>" class="footer-link"><%= lang === 'vi' ? 'Bộ Sưu Tập' : 'Collections' %></a></li>
+        <li><a href="/lookbook?lang=<%= lang %>" class="footer-link">Lookbook</a></li>
+        <li><a href="/about?lang=<%= lang %>" class="footer-link"><%= lang === 'vi' ? 'Câu Chuyện Thương Hiệu' : 'Brand Story' %></a></li>
+        <li><a href="/about?lang=<%= lang %>" class="footer-link"><%= lang === 'vi' ? 'Nhà Thiết Kế' : 'Designers' %></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title"><%= lang === 'vi' ? 'Thông Tin' : 'Information' %></div>
+      <ul class="footer-links">
+        <li><a href="/contact?lang=<%= lang %>" class="footer-link"><%= lang === 'vi' ? 'Liên Hệ' : 'Contact' %></a></li>
+        <li><a href="#" class="footer-link"><%= lang === 'vi' ? 'Báo Chí' : 'Press' %></a></li>
+        <li><a href="#" class="footer-link"><%= lang === 'vi' ? 'Cộng Tác' : 'Collaboration' %></a></li>
+        <li><a href="#" class="footer-link"><%= lang === 'vi' ? 'Tuyển Dụng' : 'Careers' %></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title"><%= lang === 'vi' ? 'Liên Hệ' : 'Contact' %></div>
+      <ul class="footer-links">
+        <li><a href="mailto:<%= brand.email %>" class="footer-link"><%= brand.email %></a></li>
+        <li><a href="tel:<%= brand.phone.replace(/\s/g,'') %>" class="footer-link"><%= brand.phone %></a></li>
+        <li><span class="footer-link" style="cursor:default;"><%= lang === 'vi' ? brand.address.vi : brand.address.en %></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">© <%= new Date().getFullYear() %> GIANG FASHION. <%= lang === 'vi' ? 'Bảo lưu mọi quyền.' : 'All rights reserved.' %></p>
+    <p class="footer-copy"><%= lang === 'vi' ? 'Được tạo ra với tình yêu tại Việt Nam.' : 'Crafted with love in Vietnam.' %></p>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

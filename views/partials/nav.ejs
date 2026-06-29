@@ -1,0 +1,45 @@
+<div id="loader">
+  <div class="loader-brand">GIANG FASHION</div>
+  <div class="loader-line"></div>
+</div>
+
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="/?lang=<%= lang %>" class="nav-logo">GIANG <span>FASHION</span></a>
+
+  <ul class="nav-links">
+    <li><a href="/?lang=<%= lang %>" class="nav-link <%= page === 'home' ? 'active' : '' %>"><%= lang === 'vi' ? 'Trang Chủ' : 'Home' %></a></li>
+    <li><a href="/collections?lang=<%= lang %>" class="nav-link <%= page === 'collections' ? 'active' : '' %>"><%= lang === 'vi' ? 'Bộ Sưu Tập' : 'Collections' %></a></li>
+    <li><a href="/lookbook?lang=<%= lang %>" class="nav-link <%= page === 'lookbook' ? 'active' : '' %>">Lookbook</a></li>
+    <li><a href="/about?lang=<%= lang %>" class="nav-link <%= page === 'about' ? 'active' : '' %>"><%= lang === 'vi' ? 'Về Chúng Tôi' : 'About' %></a></li>
+    <li><a href="/contact?lang=<%= lang %>" class="nav-link <%= page === 'contact' ? 'active' : '' %>"><%= lang === 'vi' ? 'Liên Hệ' : 'Contact' %></a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <div class="nav-lang">
+      <button class="lang-btn <%= lang === 'vi' ? 'active' : '' %>" data-lang="vi">VI</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn <%= lang === 'en' ? 'active' : '' %>" data-lang="en">EN</button>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" role="dialog" aria-modal="true">
+  <ul style="display:flex;flex-direction:column;align-items:center;gap:32px;">
+    <li><a href="/?lang=<%= lang %>" class="nav-link"><%= lang === 'vi' ? 'Trang Chủ' : 'Home' %></a></li>
+    <li><a href="/collections?lang=<%= lang %>" class="nav-link"><%= lang === 'vi' ? 'Bộ Sưu Tập' : 'Collections' %></a></li>
+    <li><a href="/lookbook?lang=<%= lang %>" class="nav-link">Lookbook</a></li>
+    <li><a href="/about?lang=<%= lang %>" class="nav-link"><%= lang === 'vi' ? 'Về Chúng Tôi' : 'About' %></a></li>
+    <li><a href="/contact?lang=<%= lang %>" class="nav-link"><%= lang === 'vi' ? 'Liên Hệ' : 'Contact' %></a></li>
+  </ul>
+  <div class="nav-lang">
+    <button class="lang-btn" data-lang="vi">VI</button>
+    <span class="lang-sep">|</span>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</div>
