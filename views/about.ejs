@@ -1,10 +1,10 @@
-<%- include('partials/head', { title: (lang === 'vi' ? 'Về Chúng Tôi' : 'About') + ' — GIANG FASHION' }) %>
+<%- include('partials/head', { title: (lang === 'vi' ? 'Về Chúng Tôi' : 'About') + ' — QUANG FASHION' }) %>
 <%- include('partials/nav') %>
 
 <!-- ══ Hero ══ -->
 <section class="about-hero">
   <div class="about-hero-bg">
-    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1920&q=90" alt="GIANG FASHION Atelier" loading="eager" />
+    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1920&q=90" alt="QUANG FASHION Atelier" loading="eager" />
   </div>
   <div class="about-hero-content">
     <p class="section-label" style="text-align:center;display:block;margin-bottom:16px;"><%= lang === 'vi' ? 'Về Chúng Tôi' : 'About Us' %></p>
@@ -22,8 +22,8 @@
     <div class="divider" style="margin:32px auto;"></div>
     <p style="font-size:clamp(16px,1.5vw,20px);color:var(--cream-dim);line-height:1.9;font-family:var(--ff-garamond);font-style:italic;">
       "<%= lang === 'vi'
-        ? 'GIANG FASHION không đơn thuần là một thương hiệu thời trang. Chúng tôi là người kể chuyện — những câu chuyện về vẻ đẹp, về bản sắc, về sức mạnh tiềm ẩn trong mỗi người phụ nữ Việt Nam.'
-        : 'GIANG FASHION is not merely a fashion brand. We are storytellers — stories of beauty, identity, and the hidden strength within every Vietnamese woman.' %>"
+        ? 'QUANG FASHION không đơn thuần là một thương hiệu thời trang. Chúng tôi là người kể chuyện — những câu chuyện về vẻ đẹp, về bản sắc, về sức mạnh tiềm ẩn trong mỗi người phụ nữ Việt Nam.'
+        : 'QUANG FASHION is not merely a fashion brand. We are storytellers — stories of beauty, identity, and the hidden strength within every Vietnamese woman.' %>"
     </p>
   </div>
 </section>
@@ -42,8 +42,8 @@
         <h3 class="timeline-title"><%= lang === 'vi' ? 'Khởi Nguyên' : 'The Beginning' %></h3>
         <p class="timeline-text">
           <%= lang === 'vi'
-            ? 'GIANG FASHION được thành lập tại TP. Hồ Chí Minh với một atelier nhỏ và một niềm đam mê lớn. Những bộ váy đầu tiên được tạo ra bởi chính tay nhà sáng lập, mang theo ước mơ về một thương hiệu thời trang Việt Nam đẳng cấp quốc tế.'
-            : 'GIANG FASHION was founded in Ho Chi Minh City with a small atelier and a grand passion. The first gowns were crafted by the founder\'s own hands, carrying a dream of an internationally acclaimed Vietnamese fashion house.' %>
+            ? 'QUANG FASHION được thành lập tại TP. Hồ Chí Minh với một atelier nhỏ và một niềm đam mê lớn. Những bộ váy đầu tiên được tạo ra bởi chính tay nhà sáng lập, mang theo ước mơ về một thương hiệu thời trang Việt Nam đẳng cấp quốc tế.'
+            : 'QUANG FASHION was founded in Ho Chi Minh City with a small atelier and a grand passion. The first gowns were crafted by the founder\'s own hands, carrying a dream of an internationally acclaimed Vietnamese fashion house.' %>
         </p>
       </div>
     </div>
@@ -53,8 +53,8 @@
         <h3 class="timeline-title"><%= lang === 'vi' ? 'Ra Mắt Quốc Tế' : 'International Debut' %></h3>
         <p class="timeline-text">
           <%= lang === 'vi'
-            ? 'Lần đầu tiên trình diễn tại Tuần Lễ Thời Trang Singapore, GIANG FASHION gây tiếng vang lớn với bộ sưu tập "Mekong Dreams" — sự hòa quyện giữa lụa Hà Đông và kỹ thuật thêu thủ công.'
-            : 'Debuting at Singapore Fashion Week, GIANG FASHION made a resounding impression with the "Mekong Dreams" collection — a fusion of Ha Dong silk and hand-embroidery techniques.' %>
+            ? 'Lần đầu tiên trình diễn tại Tuần Lễ Thời Trang Singapore, QUANG FASHION gây tiếng vang lớn với bộ sưu tập "Mekong Dreams" — sự hòa quyện giữa lụa Hà Đông và kỹ thuật thêu thủ công.'
+            : 'Debuting at Singapore Fashion Week, QUANG FASHION made a resounding impression with the "Mekong Dreams" collection — a fusion of Ha Dong silk and hand-embroidery techniques.' %>
         </p>
       </div>
     </div>
@@ -86,8 +86,8 @@
         <h3 class="timeline-title"><%= lang === 'vi' ? 'Tầm Nhìn Mới' : 'New Vision' %></h3>
         <p class="timeline-text">
           <%= lang === 'vi'
-            ? 'Ra mắt digital flagship và mở rộng ra thị trường Đông Nam Á, châu Âu. GIANG FASHION tiếp tục hành trình đưa vẻ đẹp Việt Nam ra thế giới.'
-            : 'Launching the digital flagship and expanding to Southeast Asian and European markets. GIANG FASHION continues the journey of bringing Vietnamese beauty to the world.' %>
+            ? 'Ra mắt digital flagship và mở rộng ra thị trường Đông Nam Á, châu Âu. QUANG FASHION tiếp tục hành trình đưa vẻ đẹp Việt Nam ra thế giới.'
+            : 'Launching the digital flagship and expanding to Southeast Asian and European markets. QUANG FASHION continues the journey of bringing Vietnamese beauty to the world.' %>
         </p>
       </div>
     </div>
@@ -130,7 +130,7 @@
   <div class="team-grid">
     <%
       const team = [
-        { name: 'Giang Nguyễn', role: { vi: 'Nhà Sáng Lập & Giám Đốc Sáng Tạo', en: 'Founder & Creative Director' }, image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=85' },
+        { name: 'Quang Nguyễn', role: { vi: 'Nhà Sáng Lập & Giám Đốc Sáng Tạo', en: 'Founder & Creative Director' }, image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=85' },
         { name: 'Minh Châu', role: { vi: 'Trưởng Nhóm Thiết Kế', en: 'Head of Design' }, image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=85' },
         { name: 'Linh Phạm', role: { vi: 'Giám Đốc Nghệ Thuật', en: 'Art Director' }, image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=85' },
         { name: 'Hà Trần', role: { vi: 'Nghệ Nhân Cao Cấp', en: 'Master Artisan' }, image: 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=600&q=85' },

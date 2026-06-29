@@ -1,4 +1,4 @@
-# GIANG FASHION — Luxury Fashion Website
+# QUANG FASHION — Luxury Fashion Website
 
 A high-end luxury fashion showcase website built with Node.js + Express + EJS.
 
@@ -48,13 +48,13 @@ Open http://localhost:3000
    ```
 5. **Clone your repo:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/giang-fashion.git
-   cd giang-fashion
+   git clone https://github.com/YOUR_USERNAME/quang-fashion.git
+   cd quang-fashion
    npm install --production
    ```
 6. **Start with PM2:**
    ```bash
-   pm2 start server.js --name "giang-fashion"
+   pm2 start server.js --name "quang-fashion"
    pm2 startup
    pm2 save
    ```
@@ -81,7 +81,7 @@ Open http://localhost:3000
 ### Option 2: Hostinger Shared Hosting (Node.js App)
 
 1. Go to **hPanel → Websites → Node.js**
-2. Set **Application Root:** `/public_html/giang-fashion`
+2. Set **Application Root:** `/public_html/quang-fashion`
 3. Set **Application URL:** your domain
 4. Set **Application Startup File:** `server.js`
 5. Upload files via File Manager or Git
@@ -101,8 +101,8 @@ NODE_ENV=production
 ```bash
 git init
 git add .
-git commit -m "Initial commit: GIANG FASHION luxury website"
-git remote add origin https://github.com/YOUR_USERNAME/giang-fashion.git
+git commit -m "Initial commit: QUANG FASHION luxury website"
+git remote add origin https://github.com/YOUR_USERNAME/quang-fashion.git
 git branch -M main
 git push -u origin main
 ```
@@ -116,4 +116,4 @@ git push -u origin main
 
 ---
 
-© 2025 GIANG FASHION. All rights reserved.
+© 2025 QUANG FASHION. All rights reserved.

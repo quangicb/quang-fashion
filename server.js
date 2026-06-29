@@ -12,10 +12,10 @@ app.use(express.json());
 
 const siteData = {
   brand: {
-    name: 'GIANG FASHION',
+    name: 'QUANG FASHION',
     tagline: { vi: 'Nghệ Thuật Của Sự Sang Trọng', en: 'The Art of Luxury' },
     founded: '2010',
-    email: 'hello@giangfashion.vn',
+    email: 'hello@quangfashion.vn',
     phone: '+84 28 3823 9999',
     address: { vi: '12 Đường Đồng Khởi, Quận 1, TP. Hồ Chí Minh', en: '12 Dong Khoi Street, District 1, Ho Chi Minh City' },
   },
@@ -119,5 +119,5 @@ app.post('/contact', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`GIANG FASHION server running on http://localhost:${PORT}`);
+  console.log(`QUANG FASHION server running on http://localhost:${PORT}`);
 });

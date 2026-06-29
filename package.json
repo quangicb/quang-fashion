@@ -1,7 +1,7 @@
 {
-  "name": "giang-fashion",
+  "name": "quang-fashion",
   "version": "1.0.0",
-  "description": "GIANG FASHION - Luxury Vietnamese Fashion House",
+  "description": "QUANG FASHION - Luxury Vietnamese Fashion House",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
