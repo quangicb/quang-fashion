@@ -18,7 +18,7 @@
 <div class="contact-grid">
   <div class="contact-info reveal">
     <p class="section-label"><%= lang === 'vi' ? 'Thông Tin' : 'Information' %></p>
-    <h2 class="section-title" style="margin-bottom:48px;"><%= lang === 'vi' ? 'Chúng Tôi <em>Lắng Nghe</em>' : 'We <em>Listen</em>' %></h2>
+    <h2 class="section-title" style="margin-bottom:48px;"><%- lang === 'vi' ? 'Chúng Tôi <em>Lắng Nghe</em>' : 'We <em>Listen</em>' %></h2>
 
     <div class="contact-item">
       <p class="contact-item-label"><%= lang === 'vi' ? 'Địa Chỉ' : 'Address' %></p>
@@ -55,7 +55,7 @@
 
   <div class="contact-form-wrap reveal reveal-delay-2">
     <p class="section-label"><%= lang === 'vi' ? 'Gửi Tin Nhắn' : 'Send Message' %></p>
-    <h2 class="section-title" style="margin-bottom:48px;"><%= lang === 'vi' ? 'Để Lại <em>Lời Nhắn</em>' : 'Leave a <em>Message</em>' %></h2>
+    <h2 class="section-title" style="margin-bottom:48px;"><%- lang === 'vi' ? 'Để Lại <em>Lời Nhắn</em>' : 'Leave a <em>Message</em>' %></h2>
 
     <% if (success) { %>
     <div class="success-msg">

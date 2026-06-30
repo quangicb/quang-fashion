@@ -9,7 +9,7 @@
   <div class="about-hero-content">
     <p class="section-label" style="text-align:center;display:block;margin-bottom:16px;"><%= lang === 'vi' ? 'Về Chúng Tôi' : 'About Us' %></p>
     <h1 class="hero-title" style="text-align:center;font-size:clamp(48px,8vw,100px);">
-      <%= lang === 'vi' ? 'Di Sản &<br><em>Sự Kiêu Hãnh</em>' : 'Heritage &<br><em>Pride</em>' %>
+      <%- lang === 'vi' ? 'Di Sản &<br><em>Sự Kiêu Hãnh</em>' : 'Heritage &<br><em>Pride</em>' %>
     </h1>
   </div>
 </section>
@@ -18,7 +18,7 @@
 <section class="section">
   <div style="max-width:800px;margin:0 auto;text-align:center;" class="reveal">
     <p class="section-label" style="display:block;text-align:center;"><%= lang === 'vi' ? 'Sứ Mệnh' : 'Mission' %></p>
-    <h2 class="section-title" style="text-align:center;"><%= lang === 'vi' ? 'Chúng Tôi Tin Vào<br><em>Vẻ Đẹp Đích Thực</em>' : 'We Believe In<br><em>Authentic Beauty</em>' %></h2>
+    <h2 class="section-title" style="text-align:center;"><%- lang === 'vi' ? 'Chúng Tôi Tin Vào<br><em>Vẻ Đẹp Đích Thực</em>' : 'We Believe In<br><em>Authentic Beauty</em>' %></h2>
     <div class="divider" style="margin:32px auto;"></div>
     <p style="font-size:clamp(16px,1.5vw,20px);color:var(--cream-dim);line-height:1.9;font-family:var(--ff-garamond);font-style:italic;">
       "<%= lang === 'vi'
@@ -32,7 +32,7 @@
 <section style="background:var(--dark-2);padding:clamp(80px,10vw,140px) 0;">
   <div style="padding:0 clamp(20px,5vw,80px);margin-bottom:60px;" class="reveal">
     <p class="section-label"><%= lang === 'vi' ? 'Lịch Sử' : 'History' %></p>
-    <h2 class="section-title"><%= lang === 'vi' ? 'Hành Trình <em>15 Năm</em>' : 'A Journey of <em>15 Years</em>' %></h2>
+    <h2 class="section-title"><%- lang === 'vi' ? 'Hành Trình <em>15 Năm</em>' : 'A Journey of <em>15 Years</em>' %></h2>
   </div>
 
   <div class="timeline">
@@ -98,7 +98,7 @@
 <section class="section">
   <div class="reveal" style="margin-bottom:64px;">
     <p class="section-label"><%= lang === 'vi' ? 'Giá Trị' : 'Values' %></p>
-    <h2 class="section-title"><%= lang === 'vi' ? 'Những Điều <em>Chúng Tôi</em><br>Tin Tưởng' : 'What We<br><em>Believe In</em>' %></h2>
+    <h2 class="section-title"><%- lang === 'vi' ? 'Những Điều <em>Chúng Tôi</em><br>Tin Tưởng' : 'What We<br><em>Believe In</em>' %></h2>
   </div>
 
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:40px;">
@@ -124,16 +124,16 @@
 <section class="section" style="padding-top:0;">
   <div class="reveal" style="margin-bottom:48px;">
     <p class="section-label"><%= lang === 'vi' ? 'Đội Ngũ' : 'The Team' %></p>
-    <h2 class="section-title"><%= lang === 'vi' ? 'Những <em>Con Người</em><br>Đằng Sau Vẻ Đẹp' : 'The <em>People</em><br>Behind the Beauty' %></h2>
+    <h2 class="section-title"><%- lang === 'vi' ? 'Những <em>Con Người</em><br>Đằng Sau Vẻ Đẹp' : 'The <em>People</em><br>Behind the Beauty' %></h2>
   </div>
 
   <div class="team-grid">
     <%
       const team = [
-        { name: 'Quang Nguyễn', role: { vi: 'Nhà Sáng Lập & Giám Đốc Sáng Tạo', en: 'Founder & Creative Director' }, image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=85' },
-        { name: 'Minh Châu', role: { vi: 'Trưởng Nhóm Thiết Kế', en: 'Head of Design' }, image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=85' },
-        { name: 'Linh Phạm', role: { vi: 'Giám Đốc Nghệ Thuật', en: 'Art Director' }, image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=85' },
-        { name: 'Hà Trần', role: { vi: 'Nghệ Nhân Cao Cấp', en: 'Master Artisan' }, image: 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=600&q=85' },
+        { name: 'Quang Nguyễn', role: { vi: 'Nhà Sáng Lập & Giám Đốc Sáng Tạo', en: 'Founder & Creative Director' }, image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=85' },
+        { name: 'Ngọc Châu', role: { vi: 'Trưởng Nhóm Thiết Kế', en: 'Head of Design' }, image: 'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?w=600&q=85' },
+        { name: 'Mai Phạm', role: { vi: 'Giám Đốc Nghệ Thuật', en: 'Art Director' }, image: 'https://images.unsplash.com/photo-1515023115689-589c33041d3c?w=600&q=85' },
+        { name: 'Lan Trần', role: { vi: 'Nghệ Nhân Cao Cấp', en: 'Master Artisan' }, image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=85' },
       ];
     %>
     <% team.forEach((member, i) => { %>

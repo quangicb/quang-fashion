@@ -214,3 +214,39 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
     window.location.href = url.toString();
   });
 });
+
+// ─── Theme Toggle ───
+const themeToggle = document.getElementById('themeToggle');
+
+function getTheme() {
+  const saved = localStorage.getItem('qf-theme');
+  if (saved) return saved;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme) {
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+  localStorage.setItem('qf-theme', theme);
+}
+
+applyTheme(getTheme());
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'light' ? 'dark' : 'light';
+    applyTheme(next);
+    themeToggle.querySelectorAll('svg').forEach(svg => {
+      svg.style.transform = 'rotate(180deg) scale(0.7)';
+      svg.style.opacity = '0';
+      setTimeout(() => {
+        svg.style.transform = '';
+        svg.style.opacity = '';
+      }, 300);
+    });
+  });
+}

@@ -14,7 +14,7 @@
   <div class="hero-content">
     <p class="hero-season">FW 2025 — <%= lang === 'vi' ? 'Bộ Sưu Tập Mới Nhất' : 'Latest Collection' %></p>
     <h1 class="hero-title">
-      <%= lang === 'vi' ? 'Nghệ Thuật<br>Của <em>Sự Sang<br>Trọng</em>' : 'The Art<br>Of <em>Luxury<br>Redefined</em>' %>
+      <%- lang === 'vi' ? 'Nghệ Thuật<br>Của <em>Sự Sang<br>Trọng</em>' : 'The Art<br>Of <em>Luxury<br>Redefined</em>' %>
     </h1>
     <p class="hero-subtitle">
       <%= lang === 'vi'
@@ -57,7 +57,7 @@
 <section class="section">
   <div class="reveal">
     <p class="section-label"><%= lang === 'vi' ? 'Bộ Sưu Tập' : 'Collections' %></p>
-    <h2 class="section-title"><%= lang === 'vi' ? 'Những <em>Kiệt Tác</em><br>Mới Nhất' : 'Our Latest<br><em>Masterpieces</em>' %></h2>
+    <h2 class="section-title"><%- lang === 'vi' ? 'Những <em>Kiệt Tác</em><br>Mới Nhất' : 'Our Latest<br><em>Masterpieces</em>' %></h2>
     <div class="divider"></div>
   </div>
 
@@ -102,7 +102,7 @@
   <div class="story-content">
     <p class="section-label reveal"><%= lang === 'vi' ? 'Câu Chuyện Của Chúng Tôi' : 'Our Story' %></p>
     <h2 class="section-title reveal reveal-delay-1">
-      <%= lang === 'vi' ? 'Di Sản &<br><em>Sự Sáng Tạo</em>' : 'Heritage &<br><em>Innovation</em>' %>
+      <%- lang === 'vi' ? 'Di Sản &<br><em>Sự Sáng Tạo</em>' : 'Heritage &<br><em>Innovation</em>' %>
     </h2>
     <blockquote class="story-quote reveal reveal-delay-2">
       "<%= lang === 'vi'
@@ -129,7 +129,7 @@
   <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap;" class="reveal">
     <div>
       <p class="section-label">Lookbook</p>
-      <h2 class="section-title"><%= lang === 'vi' ? '<em>Nhìn Thấy</em><br>Vẻ Đẹp' : 'See The<br><em>Beauty</em>' %></h2>
+      <h2 class="section-title"><%- lang === 'vi' ? '<em>Nhìn Thấy</em><br>Vẻ Đẹp' : 'See The<br><em>Beauty</em>' %></h2>
     </div>
     <a href="/lookbook?lang=<%= lang %>" class="btn-outline" style="flex-shrink:0;">
       <%= lang === 'vi' ? 'Xem Lookbook' : 'View Lookbook' %>
@@ -162,7 +162,7 @@
 " class="reveal">
   <p class="section-label" style="text-align:center;display:block;"><%= lang === 'vi' ? 'Trải Nghiệm Xa Xỉ' : 'Luxury Experience' %></p>
   <h2 class="section-title" style="text-align:center;max-width:700px;margin:0 auto 24px;">
-    <%= lang === 'vi' ? 'Sẵn Sàng Trải Nghiệm<br><em>QUANG FASHION</em>?' : 'Ready to Experience<br><em>QUANG FASHION</em>?' %>
+    <%- lang === 'vi' ? 'Sẵn Sàng Trải Nghiệm<br><em>QUANG FASHION</em>?' : 'Ready to Experience<br><em>QUANG FASHION</em>?' %>
   </h2>
   <p style="color:var(--gray-1);font-size:16px;max-width:500px;margin:0 auto 48px;line-height:1.85;">
     <%= lang === 'vi'
