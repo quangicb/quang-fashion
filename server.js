@@ -17,7 +17,7 @@ const siteData = {
     founded: '2010',
     email: 'hello@quangfashion.vn',
     phone: '+84 28 3823 9999',
-    address: { vi: '12 Đường Đồng Khởi, Quận 1, TP. Hồ Chí Minh', en: '12 Dong Khoi Street, District 1, Ho Chi Minh City' },
+    address: { vi: '37B Nguyễn Thái Học, Nha Trang, Khánh Hòa', en: '37B Nguyen Thai Hoc, Nha Trang, Khanh Hoa' },
   },
   collections: [
     {
